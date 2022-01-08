@@ -1,0 +1,3 @@
+mutation EditBook($id: String!, $inputBook: InputBook!) {
+    update(id: $id, inputBook: $inputBook)
+}

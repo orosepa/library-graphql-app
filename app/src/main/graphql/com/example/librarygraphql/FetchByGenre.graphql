@@ -1,0 +1,8 @@
+query FetchByGenre($genre: String!) {
+    booksByGenre(genre: $genre) {
+        id
+        title
+        author
+        genre
+    }
+}

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/bookListFragment">
+
+    <fragment
+        android:id="@+id/bookListFragment"
+        android:name="com.example.librarygraphql.fragments.BookListFragment"
+        android:label="fragment_book_list"
+        tools:layout="@layout/fragment_book_list" >
+        <action
+            android:id="@+id/action_bookListFragment_to_bookInfoFragment"
+            app:destination="@id/bookInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookInfoFragment"
+        android:name="com.example.librarygraphql.fragments.BookInfoFragment"
+        android:label="fragment_book_info"
+        tools:layout="@layout/fragment_book_info" >
+
+        <argument
+            android:name="bookId"
+            app:argType="string" />
+        <argument
+            android:name="bookTitle"
+            app:argType="string" />
+        <argument
+            android:name="bookAuthor"
+            app:argType="string" />
+        <argument
+            android:name="bookGenre"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_bookInfoFragment_to_bookListFragment"
+            app:destination="@id/bookListFragment" />
+        <action
+            android:id="@+id/action_bookInfoFragment_to_editBookFragment"
+            app:destination="@id/editBookFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchByAuthorFragment"
+        android:name="com.example.librarygraphql.fragments.SearchByAuthorFragment"
+        android:label="fragment_search_by_author"
+        tools:layout="@layout/fragment_search_by_author" >
+        <action
+            android:id="@+id/action_searchByAuthorFragment_to_bookInfoFragment"
+            app:destination="@id/bookInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchByGenreFragment"
+        android:name="com.example.librarygraphql.fragments.SearchByGenreFragment"
+        android:label="fragment_search_by_genre"
+        tools:layout="@layout/fragment_search_by_genre" >
+        <action
+            android:id="@+id/action_searchByGenreFragment_to_bookInfoFragment"
+            app:destination="@id/bookInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addBookFragment"
+        android:name="com.example.librarygraphql.fragments.AddBookFragment"
+        android:label="fragment_add_book"
+        tools:layout="@layout/fragment_add_book">
+        <action
+            android:id="@+id/action_addBookFragment_to_bookListFragment"
+            app:destination="@id/bookListFragment" />
+    </fragment>
+    <action android:id="@+id/action_global_addBookFragment" app:destination="@id/addBookFragment" />
+    <fragment
+        android:id="@+id/editBookFragment"
+        android:name="com.example.librarygraphql.fragments.EditBookFragment"
+        android:label="EditBookFragment"
+        tools:layout="@layout/fragment_edit_book">
+        <argument
+            android:name="bookId"
+            app:argType="string" />
+        <argument
+            android:name="bookTitle"
+            app:argType="string" />
+        <argument
+            android:name="bookAuthor"
+            app:argType="string" />
+        <argument
+            android:name="bookGenre"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_editBookFragment_to_bookInfoFragment"
+            app:destination="@id/bookInfoFragment" />
+    </fragment>
+</navigation>

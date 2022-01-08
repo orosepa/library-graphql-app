@@ -1,0 +1,8 @@
+query BookList {
+    books {
+        id
+        title
+        author
+        genre
+    }
+}

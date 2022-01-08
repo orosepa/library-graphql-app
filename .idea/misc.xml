@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable-v24/ic_home.xml" value="0.17395833333333333" />
+        <entry key="app/src/main/res/drawable-v24/ic_search.xml" value="0.17395833333333333" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1503623188405797" />
+        <entry key="app/src/main/res/layout/fragment_add_book.xml" value="0.3282395501959332" />
+        <entry key="app/src/main/res/layout/fragment_book_info.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_book_list.xml" value="0.1503623188405797" />
+        <entry key="app/src/main/res/layout/fragment_edit_book.xml" value="0.1578125" />
+        <entry key="app/src/main/res/layout/fragment_search_by_author.xml" value="0.21" />
+        <entry key="app/src/main/res/layout/fragment_search_by_genre.xml" value="0.4369392228216645" />
+        <entry key="app/src/main/res/layout/item_book_list.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/add_menu.xml" value="0.178125" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.1578125" />
+        <entry key="app/src/main/res/menu/drawer_bottom_nav_menu.xml" value="0.1578125" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

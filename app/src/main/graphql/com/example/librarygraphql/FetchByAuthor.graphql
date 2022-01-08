@@ -1,0 +1,8 @@
+query FetchByAuthor($author: String!) {
+    booksByAuthor(author: $author) {
+        id
+        title
+        author
+        genre
+    }
+}

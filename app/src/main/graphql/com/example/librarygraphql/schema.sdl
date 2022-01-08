@@ -1,0 +1,44 @@
+# Book object with the attributes id, title, genre and author
+type Book {
+  author: String!
+  genre: String!
+  id: String!
+  title: String!
+}
+
+# Book object without identifier
+input InputBook {
+  author: String!
+  genre: String!
+  title: String!
+}
+
+# The Short scalar type represents a signed 16-bit numeric non-fractional value
+scalar Short
+
+# The Long scalar type represents a signed 64-bit numeric non-fractional value
+scalar Long
+
+# Query object
+type Query {
+  # Retrieve all books
+  books: [Book!]!
+
+  # Retrieve list of books of specific author
+  booksByAuthor(author: String!): [Book!]!
+
+  # Retrieve list of books of specific genre
+  booksByGenre(genre: String!): [Book!]!
+}
+
+# Mutation object
+type Mutation {
+  # Create a new book
+  create(inputBook: InputBook!): Boolean!
+
+  # Update book's info
+  update(id: String!, inputBook: InputBook!): Boolean!
+
+  # Deletes a book by id
+  delete(id: String!): Boolean!
+}

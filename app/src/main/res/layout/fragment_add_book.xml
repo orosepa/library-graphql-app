@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.AddBookFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="80dp">
+
+        <TextView
+            android:id="@+id/tv_add_book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add new book"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/input_add_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_add_book"
+            app:layout_constraintBottom_toTopOf="@id/input_add_author"/>
+
+        <EditText
+            android:id="@+id/input_add_author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter author"
+            app:layout_constraintTop_toBottomOf="@+id/input_add_title"
+            app:layout_constraintBottom_toTopOf="@id/input_add_genre"/>
+
+        <EditText
+            android:id="@+id/input_add_genre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter genre"
+            app:layout_constraintBottom_toTopOf="@id/btn_submit"
+            app:layout_constraintTop_toBottomOf="@+id/input_add_author"
+            tools:layout_editor_absoluteX="24dp" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_add_genre" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
